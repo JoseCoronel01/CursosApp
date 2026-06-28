@@ -6,6 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+builder.Services.AddScoped<DBGenerica>();
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
